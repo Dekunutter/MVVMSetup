@@ -3,4 +3,8 @@
 
     <string name="increment_title">Incrementer</string>
     <string name="increment">Increment</string>
+
+    <string name="confirm">Confirm</string>
+
+    <string name="invalid_input">Invalid input value</string>
 </resources>

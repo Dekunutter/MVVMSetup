@@ -9,12 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".views.StartupView"
-            android:label="@string/increment_title">
+            android:name="com.setup.deku.mvvm.ui.views.SplashView"
+            android:label="@string/increment_title"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.setup.deku.mvvm.ui.views.InitializerView"/>
+        <activity android:name="com.setup.deku.mvvm.ui.views.CounterView"/>
     </application>
 </manifest>

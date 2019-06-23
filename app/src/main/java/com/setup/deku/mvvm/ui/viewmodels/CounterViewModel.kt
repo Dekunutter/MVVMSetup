@@ -1,12 +1,12 @@
-package com.setup.deku.mvvm.viewmodels
+package com.setup.deku.mvvm.ui.viewmodels
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 
 /**
- * ViewModel for the Startup activity, utilizing the lifecycle extension's view model for lifecycle awareness
+ * ViewModel for the Counter activity, utilizing the lifecycle extension's view model for lifecycle awareness
  */
-class StartupViewModel : ViewModel() {
+class CounterViewModel : ViewModel() {
     var count = MutableLiveData<Int>()
 
     init {

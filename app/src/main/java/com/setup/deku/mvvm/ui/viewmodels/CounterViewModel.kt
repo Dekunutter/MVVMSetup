@@ -14,9 +14,9 @@ class CounterViewModel : ViewModel() {
     }
 
     /**
-     * Increments the value stored in the livedata counter if it is not null
+     * Increments the value stored in the livedata counter by 10 if it is not null
      */
     fun incrementCounter() {
-        count.value = count.value?.inc()
+        count.value = count.value?.plus(10)
     }
 }

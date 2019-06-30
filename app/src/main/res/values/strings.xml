@@ -11,6 +11,7 @@
 
     <!-- Errors -->
     <string name="invalid_input">Invalid input value</string>
+    <string name="failed_to_write_preferences">Failed to write changes to the shared preferences</string>
 
     <!-- Menu Options -->
     <string name="options">Options</string>

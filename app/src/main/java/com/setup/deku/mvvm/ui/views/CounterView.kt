@@ -2,8 +2,13 @@ package com.setup.deku.mvvm.ui.views
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
+import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import com.setup.deku.mvvm.R
+import com.setup.deku.mvvm.ui.navigators.CounterNavigator
 import com.setup.deku.mvvm.ui.viewmodels.CounterViewModel
 import com.setup.deku.mvvm.ui.viewmodels.providerfactories.CounterViewModelFactory
 import kotlinx.android.synthetic.main.counter.*
@@ -11,7 +16,7 @@ import kotlinx.android.synthetic.main.counter.*
 /**
  * Activity for our counter screen that inherits from our abstract MVVM activity class
  */
-class CounterView : MVVMActivity() {
+class CounterView : MVVMActivity(), CounterNavigator {
     private lateinit var viewModel: CounterViewModel
 
     /**
@@ -38,9 +43,42 @@ class CounterView : MVVMActivity() {
     override fun setupView() {
         setContentView(R.layout.counter)
 
+        setSupportActionBar(toolbar as Toolbar)
+
         increment_button.setOnClickListener(incrementClickListener)
 
         counter_textview.text = viewModel.count.toString()
+    }
+
+    /**
+     * Inflates a menu onto our custom toolbar
+     * @param menu The menu that we are inflating with our custom menu layout
+     * @return Whether the custom menu was loaded
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    /**
+     * Reacts to options being selected from the menu in the custom toolbar
+     * @param item The selected menu item
+     * @return Whether we processed the menu item's selection
+     */
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if(id == R.id.toolbar_options) {
+            openOptionsView()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    /**
+     * Starts the Options activity
+     */
+    override fun openOptionsView() {
+        startActivity(Intent(this, OptionsView::class.java))
     }
 
     /**

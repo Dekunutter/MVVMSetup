@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.setup.deku.mvvm.ui.views.InitializerView"/>
+        <activity android:name="com.setup.deku.mvvm.ui.views.OptionsView"/>
         <activity android:name="com.setup.deku.mvvm.ui.views.CounterView"/>
     </application>
 </manifest>

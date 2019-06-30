@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">MVVMSetup</string>
 
+    <!-- Counter screen -->
     <string name="increment_title">Incrementer</string>
     <string name="increment">Increment</string>
 
+    <!-- Common strings -->
     <string name="confirm">Confirm</string>
+    <string name="save">Save</string>
 
+    <!-- Errors -->
     <string name="invalid_input">Invalid input value</string>
+
+    <!-- Menu Options -->
+    <string name="options">Options</string>
+
+    <!-- Options screen -->
+    <string name="daily_intake_label">Daily Calorie Intake:</string>
+    <string name="username_label">Username:</string>
 </resources>

@@ -7,7 +7,7 @@ private const val DAILY_INTAKE = "PREF_KEY_DAILY_INTAKE"
 private const val USERNAME = "PREF_KEY_USERNAME"
 
 /**
- * Concreate implementation of Shared Preferences access intended for general application settings
+ * Concrete implementation of Shared Preferences access intended for general application settings
  */
 class AppPreferencesHelper(context: Context): PreferencesHelper(context, APP_PREFERENCES_FILE) {
 

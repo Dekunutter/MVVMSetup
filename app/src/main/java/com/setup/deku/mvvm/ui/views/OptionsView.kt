@@ -82,9 +82,10 @@ class OptionsView : MVVMActivity() {
         val checker: Observable<Boolean> = Observable.combineLatest(intakeObservable, usernameObservable, BiFunction<String, String, Boolean> { intake, username ->
             viewModel.validateIntake(intake) && viewModel.validateUsername(username)
         })
-        checker.subscribe {
+        val validator = checker.subscribe {
             save_button.isEnabled = it
         }
+        disposables.add(validator)
 
         save_button.setOnClickListener(saveClickListener)
     }

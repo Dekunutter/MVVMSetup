@@ -25,7 +25,7 @@ class CounterView : MVVMActivity(), CounterNavigator {
      * Observes the counter livedata in the viewmodel
      */
     override fun initViewModel() {
-        val factory = CounterViewModelFactory()
+        val factory = CounterViewModelFactory(application)
         viewModel = ViewModelProviders.of(this, factory).get(CounterViewModel::class.java)
         viewModel.count.observe(this, incrementObserver)
     }

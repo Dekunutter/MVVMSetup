@@ -1,4 +1,4 @@
-package com.setup.deku.mvvm.models.local.entities
+package com.setup.deku.mvvm.models.local.room.entities
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity

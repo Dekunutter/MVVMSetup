@@ -1,9 +1,9 @@
-package com.setup.deku.mvvm.models.local
+package com.setup.deku.mvvm.models.local.room
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-import com.setup.deku.mvvm.models.local.dao.DailyIntakeDAO
-import com.setup.deku.mvvm.models.local.entities.DailyIntake
+import com.setup.deku.mvvm.models.local.room.dao.DailyIntakeDAO
+import com.setup.deku.mvvm.models.local.room.entities.DailyIntake
 import java.text.SimpleDateFormat
 import java.util.*
 

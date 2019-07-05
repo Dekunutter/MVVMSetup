@@ -1,9 +1,9 @@
-package com.setup.deku.mvvm.models.local.dao
+package com.setup.deku.mvvm.models.local.room.dao
 
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
-import com.setup.deku.mvvm.models.local.entities.DailyIntake
+import com.setup.deku.mvvm.models.local.room.entities.DailyIntake
 
 /**
  * Data access object for tracking daily calorie intakes

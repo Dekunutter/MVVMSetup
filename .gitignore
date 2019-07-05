@@ -35,3 +35,6 @@ output.json
 #NDK files
 obj/
 .externalNativeBuild
+
+#SQLite DB schemas
+/app/schemas
